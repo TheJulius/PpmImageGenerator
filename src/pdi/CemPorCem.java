@@ -8,12 +8,11 @@ public class CemPorCem {
   public static void main(String[] args) {
 	    
     try {
-      FileWriter myWriter = new FileWriter("cemPorCem.ppm");
-      myWriter.write(" P1 100 100 \n");
-      
+      FileWriter myWriter = new FileWriter("cemPorCem.ppm"); //creates the ppm file      
       Random rand = new Random(); //instance of random class
       
       System.out.println("Generate 100 x 100 PPM Image");
+      myWriter.write(" P1 100 100 \n");
       
       for (int i = 0; i < 99; i++) {
     	  if (i==0) {
@@ -23,10 +22,10 @@ public class CemPorCem {
 		}
     	  for (int j = 0; j < 99; j++) {
     		  
-    		  int upperbound = 2;
-    	      int int_random = rand.nextInt(upperbound);
+    		  int upperbound = 2; //limit the random to 0-1
+    	      int int_random = rand.nextInt(upperbound); //generates the random number
     	      
-    	      String random_converted = Integer.toString(int_random);
+    	      String random_converted = Integer.toString(int_random);//necessary conversion to write into the file
     		  myWriter.write(random_converted);
     		}
   	}  
