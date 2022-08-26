@@ -4,14 +4,14 @@ import java.io.FileWriter;   // Import the FileWriter library
 import java.io.IOException;  // Import the IOException class to handle errors
 import java.util.Random; // Import the Random library
 
-public class CemPorCem {
+public class CemPorCemPB {
   public static void main(String[] args) {
 	    
     try {
-      FileWriter myWriter = new FileWriter("cemPorCem.ppm"); //creates the ppm file      
+      FileWriter myWriter = new FileWriter("cemPorCemPB.ppm"); //creates the ppm file      
       Random rand = new Random(); //instance of random class
       
-      System.out.println("Generate 100 x 100 PPM Image");
+      System.out.println("Generate 100 x 100 PPM Black and White Image");
       myWriter.write(" P1 100 100 \n");
       
       for (int i = 0; i < 99; i++) {

@@ -4,13 +4,13 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.util.Random;
 
-public class MilPorMil {
+public class MilPorMilPB {
 	public static void main(String[] args) {
 	 try {
-	      FileWriter myWriter = new FileWriter("milPorMil.ppm"); //creates the ppm file
+	      FileWriter myWriter = new FileWriter("milPorMilPB.ppm"); //creates the ppm file
 	      Random rand = new Random(); //instance of random class
 	      
-	      System.out.println("Generate 1000 x 1000 PPM Image");
+	      System.out.println("Generate 1000 x 1000 PPM Black and White Image");
 	      myWriter.write(" P1 1000 1000 \n");
 	      
 	      for (int i = 0; i < 999; i++) {
