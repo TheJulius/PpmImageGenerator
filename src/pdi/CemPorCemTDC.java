@@ -22,7 +22,7 @@ public class CemPorCemTDC {
 		}
     	  for (int j = 0; j < 99; j++) {
     		  
-    		  int upperbound = 255; //limit the random to 0-1
+    		  int upperbound = 255; //limit the random to 0-255
     	      int int_random = rand.nextInt(upperbound); //generates the random number
     	      
     	      String random_converted = Integer.toString(int_random);//necessary conversion to write into the file

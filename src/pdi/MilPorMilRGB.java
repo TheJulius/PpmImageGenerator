@@ -23,7 +23,7 @@ public class MilPorMilRGB {
 	    	  for (int j = 0; j < 999; j++) {
 	    		  
 	    		  for (int j2 = 0; j2 < 3; j2++) {
-	    			  int upperbound = 255; //limit the random to 0-1
+	    			  int upperbound = 255; //limit the random to 0-255
 		    	      int int_random = rand.nextInt(upperbound); //generates the random number
 		    	      
 		    	      String random_converted = Integer.toString(int_random);//necessary conversion to write into the file
