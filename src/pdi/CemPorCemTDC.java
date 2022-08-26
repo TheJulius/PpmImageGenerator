@@ -12,7 +12,7 @@ public class CemPorCemTDC {
       Random rand = new Random(); //instance of random class
       
       System.out.println("Generate 100 x 100 PPM Shades of Gray Image");
-      myWriter.write(" P2 100 100 \n");
+      myWriter.write(" P2 100 100 \n 255 \n");
       
       for (int i = 0; i < 99; i++) {
     	  if (i==0) {
@@ -26,7 +26,7 @@ public class CemPorCemTDC {
     	      int int_random = rand.nextInt(upperbound); //generates the random number
     	      
     	      String random_converted = Integer.toString(int_random);//necessary conversion to write into the file
-    		  myWriter.write(random_converted);
+    		  myWriter.write(random_converted + " ");
     		}
   	}  
       myWriter.close();

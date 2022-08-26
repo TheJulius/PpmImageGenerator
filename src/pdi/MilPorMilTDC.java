@@ -11,7 +11,7 @@ public class MilPorMilTDC {
 	      Random rand = new Random(); //instance of random class
 	      
 	      System.out.println("Generate 1000 x 1000 PPM Shades of Gray Image");
-	      myWriter.write(" P2 1000 1000 \n");
+	      myWriter.write(" P2 1000 1000 \n 255 \n");
 	      
 	      for (int i = 0; i < 999; i++) {
 	    	  if (i==0) {
@@ -25,7 +25,7 @@ public class MilPorMilTDC {
 	    	      int int_random = rand.nextInt(upperbound); //generates the random number
 	    	      
 	    	      String random_converted = Integer.toString(int_random);//necessary conversion to write into the file
-	    		  myWriter.write(random_converted);
+	    		  myWriter.write(random_converted + " ");
 	    		}
 	  	}  
 	      myWriter.close();
