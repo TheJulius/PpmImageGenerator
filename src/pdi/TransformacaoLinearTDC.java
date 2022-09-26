@@ -11,6 +11,7 @@ import java.util.Arrays;
 public class TransformacaoLinearTDC {
 	public static void main(String[] args) throws Exception {
 		int imgData[] = new int[640004];
+		int imgData4[] = new int[640004];
 		int max = 0;
 		int min = 0;
 		int count = 0;
@@ -70,10 +71,10 @@ public class TransformacaoLinearTDC {
 			int b = -a * min;
 
 			for (int i = 0; i < imgData.length; i++) {
-				imgData[i] = a * imgData[i] + b;
+				imgData4[i] = a * imgData[i] + b;
 			}
 
-			String[] strArray = Arrays.stream(imgData).mapToObj(String::valueOf).toArray(String[]::new);
+			String[] strArray = Arrays.stream(imgData4).mapToObj(String::valueOf).toArray(String[]::new);
 
 			writer2.write("P2\n800 800 \n255\n");
 			for (int i = 0; i < strArray.length; i++) {
